@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Generator for professional README.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elysiayn/readme-generator.git"
+  },
+  "author": "Wendy Lemus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elysiayn/readme-generator/issues"
+  },
+  "homepage": "https://github.com/Elysiayn/readme-generator#readme",
+  "dependencies": {
+    "inquire": "^0.4.8"
+  }
+}
