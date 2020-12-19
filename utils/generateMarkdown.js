@@ -44,7 +44,7 @@ const generateFeatures = featuresText => {
 
 // create the "Deployed Production" section
 const generateDeployed = (deployedText, githubText) => {
-  if (!deployedText, githubText) {
+  if (!deployedText, !githubText) {
     return '';
   }
 
@@ -56,7 +56,7 @@ const generateDeployed = (deployedText, githubText) => {
 
 // adds production screenshot
 const generateImg = (imgText, githubText, deployedText) => {
-  if (!imgText, githubText, deployedText) {
+  if (!imgText, !githubText, !deployedText) {
     return '';
   }
 
@@ -104,7 +104,7 @@ module.exports = responseData => {
     img,
     license,
     tests,
-    ...contributions
+    contributions
   } = responseData;
 
   return `
@@ -135,17 +135,16 @@ module.exports = responseData => {
   ${generateDeployed(deployed)}
   ${generateImg(img)}
 
-  ## License
-  ${license}
+  ${generateLicense(license)}
 
   ${generateTests(tests)}
 
   ## Questions
-  Please feel free to reach me through email at:
-  Email: ${email}
+  Please feel free to reach me through email for additional questions at:
+  Email: <${email}>
 
   Visit my GitHub!
-  GitHub: https://github.com/${github}
+  GitHub: ${github}[https://github.com/${github}]
 
   ${generateContributions(contributions)}
 `;
