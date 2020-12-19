@@ -6,6 +6,32 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [{
         type: 'input',
+        name: 'github',
+        message: 'What is the username of your GitHub? (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter your GitHub username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please provide a current email address (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please provide a current email address!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'title',
         message: 'What is the title of your project? (Required)',
         validate: titleInput => {
@@ -19,22 +45,18 @@ const questions = [{
     },
     {
         type: 'confirm',
-        name: 'confirmTable',
-        message: 'Would you like to include a table of contents?',
+        name: 'confirmSubtitle',
+        message: 'Would you like to include a subtitle?',
         default: true
     },
     {
-        type: 'checkbox',
-        name: 'tableContents',
-        message: 'What sections would you like to include in the Table of Contents? (Check all that apply)',
-        choices: [
-            'Description', 'Installation', 'Features', 'Usage', 'Deployed Production',
-            'License', 'Badges', 'Tests', 'Questions', 'Contribution'
-        ],
+        type: 'input',
+        name: 'subtitle',
+        message: 'Provide subtitle',
         when: ({
-            confirmTable
+            confirmSubtitle
         }) => {
-            if (confirmTable) {
+            if (confirmSubtitle) {
                 return true;
             } else {
                 return false;
@@ -95,10 +117,10 @@ const questions = [{
     },
     {
         type: 'input',
-        name: 'deployed',
-        message: 'Provide link to deployed production (Required)',
-        validate: deployedInput => {
-            if (deployedInput) {
+        name: 'production',
+        message: 'Provide link to production (Required)',
+        validate: productionInput => {
+            if (productionInput) {
                 return true;
             } else {
                 console.log('Please enter link to your deployed project!');
@@ -128,26 +150,6 @@ const questions = [{
     },
     {
         type: 'confirm',
-        name: 'confirmBadges',
-        message: 'Would you like to include a "Badges" section?',
-        default: true
-    },
-    {
-        type: 'input',
-        name: 'badges',
-        message: 'Provide badge information',
-        when: ({
-            confirmBadges
-        }) => {
-            if (confirmBadges) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    },
-    {
-        type: 'confirm',
         name: 'confirmTests',
         message: 'Would you like to include a "Tests" section?',
         default: true
@@ -160,26 +162,6 @@ const questions = [{
             confirmTests
         }) => {
             if (confirmTests) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    },
-    {
-        type: 'confirm',
-        name: 'confirmQuestions',
-        message: 'Would you like to include a "Questions" section?',
-        default: true
-    },
-    {
-        type: 'input',
-        name: 'questions',
-        message: 'Provide question information',
-        when: ({
-            confirmQuestions
-        }) => {
-            if (confirmQuestions) {
                 return true;
             } else {
                 return false;
@@ -209,15 +191,12 @@ const questions = [{
 ];
 
 // TODO: Create a function to write README file
-const pageHTML = generateMarkdown(responseData);
-fs.writeToFile('README.md', generateMarkdown(responseData), err => {
-    if (err) throw err;
-    console.log('WriteFile Complete!');
-});
-
-// function writeToFile("README.md", responseData) {
-
-// };
+function writeToFile(fileName, responseData) {
+    fs.writeFile(fileName, responseData, err => {
+        if (err) throw err;
+        console.log('WriteToFile Complete!');
+    })
+}
 
 // TODO: Create a function to initialize app
 //use inquirer to prompt user w/ question array. Returns user response data.
@@ -228,9 +207,6 @@ function init() {
             writeToFile('README.md', generateMarkdown(responseData))
         })
 };
-
-// This is how to include a key when console log
-// console.log(responseData['description']) or responseData.description:  both are same
 
 // Function call to initialize app
 init();
