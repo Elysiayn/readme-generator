@@ -159,7 +159,7 @@ const questions = [{
     {
         type: 'input',
         name: 'img',
-        message: 'Please provide the relative path of the project screenshot',
+        message: 'Please provide the relative path of the project screenshot (ex. assests/images/screenshot.png)',
         when: ({
             confirmImg
         }) => {

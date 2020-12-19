@@ -38,13 +38,13 @@ const generateFeatures = featuresText => {
 
   return `
   ## Features
-  ${featuresText}
+  * ${featuresText}
   `;
 };
 
 // create the "Deployed Production" section
 const generateDeployed = (deployedText, githubText) => {
-  if (!deployedText, !githubText) {
+  if (!deployedText && !githubText) {
     return '';
   }
 
@@ -56,7 +56,7 @@ const generateDeployed = (deployedText, githubText) => {
 
 // adds production screenshot
 const generateImg = (imgText, githubText, deployedText) => {
-  if (!imgText, !githubText, !deployedText) {
+  if (!imgText || !githubText || !deployedText) {
     return '';
   }
 
@@ -72,7 +72,7 @@ const generateTests = testsText => {
   }
 
   return `
-  ## License
+  ## Tests
   ${testsText}
   `;
 };
@@ -85,7 +85,7 @@ const generateContributions = contributionsText => {
 
   return `
   ### Contributions
-  ${contributionsText}
+  * ${contributionsText}
   `;
 };
 
@@ -125,15 +125,15 @@ module.exports = responseData => {
   * [Contributions](#contributions)
   
   ## Installation
-  ${installation}
+  1. ${installation}
 
   ## Usage
-  ${usage}
+  1. ${usage}
 
   ${generateFeatures(features)}
 
-  ${generateDeployed(deployed)}
-  ${generateImg(img)}
+  ${generateDeployed(deployed, github)}
+  ${generateImg(img, github, deployed)}
 
   ${generateLicense(license)}
 
@@ -141,10 +141,12 @@ module.exports = responseData => {
 
   ## Questions
   Please feel free to reach me through email for additional questions at:
-  Email: <${email}>
+  <br>
+  Email: ${email}
 
   Visit my GitHub!
-  GitHub: ${github}[https://github.com/${github}]
+  <br>
+  GitHub: [${github}](https://github.com/${github})
 
   ${generateContributions(contributions)}
 `;

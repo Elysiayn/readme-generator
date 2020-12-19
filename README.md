@@ -1,9 +1,9 @@
 
-  # af
+  # title
   
 
   ## Description
-  af
+  description
 
   ## Table of Contents
   * [Installation](#installation)
@@ -16,14 +16,22 @@
   * [Contributions](#contributions)
   
   ## Installation
-  af
+  1. install
 
   ## Usage
-  af
+  1. usage
 
+  
+  ## Features
+  * features
   
 
   
+  ## Deployed Production
+  [readme-generator](https://elysiayn.github.io/readme-generator/)
+  
+  
+  [![readme-generator](utils/images/screenshot.png)](https://elysiayn.github.io/readme-generator/)
   
 
   
@@ -32,12 +40,14 @@
 
   ## Questions
   Please feel free to reach me through email for additional questions at:
-  Email: <af>
+  <br>
+  Email: wendy.lemus.wl@gmail.com
 
   Visit my GitHub!
-  GitHub: awef[https://github.com/awef]
+  <br>
+  GitHub: [elysiayn](https://github.com/elysiayn)
 
   
   ### Contributions
-  [object Object]
+  * wendy lemus
   
