@@ -27,7 +27,6 @@ function renderLicenseLink(apache, boost, bsd, eclipse, gnu, ibm, isc, perl) {
   : '';
 }
 
-
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 const generateLicense = licenseText => {
@@ -37,7 +36,7 @@ const generateLicense = licenseText => {
 
   return `
   ## License
-  License Link below:
+  Please review the license this application is under:
   <br>
   `;
 };
@@ -68,13 +67,13 @@ const generateFeatures = featuresText => {
 // create the "Deployed Production" section
 const generateDeployed = (deployedText, githubText) => {
   if (!deployedText && !githubText) {
-    return '';
+    return `
+    ## Deployed Production
+    [${deployedText}](https://${githubText}.github.io/${deployedText}/)
+    `;
   }
 
-  return `
-  ## Deployed Production
-  [${deployedText}](https://${githubText}.github.io/${deployedText}/)
-  `;
+  return '';
 };
 
 // adds production screenshot
