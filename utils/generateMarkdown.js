@@ -10,10 +10,49 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+// create the "Subtitle" section
+const generateSubtitle = subtitleText => {
+  if (!subtitleText) {
+    return '';
+  }
+
+  return `
+  ### ${subtitleText}
+  `;
+};
+
+// create the "Features" section
+const generateFeatures = featuresText => {
+  if (!featuresText) {
+    return '';
+  }
+
+  return `
+  ## Features
+  ${featuresText}
+  `;
+};
+
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-  ### ${data.subtitle}
+module.exports = responseData => {
+  const {
+    title,
+    subtitle,
+    description,
+    installation,
+    usage,
+    features,
+    deployed,
+    img,
+    license,
+    tests,
+    ...contributions
+  } = responseData;
+
+  return `
+  # ${data.title}
+
+  ${generateSubtitle(subtitle)}
 
   ## Description
   ${data.description}
@@ -31,11 +70,10 @@ function generateMarkdown(data) {
   ## Installation
   ${data.installation}
 
-  ## Features
-  ${data.features}
-
   ## Usage
   ${data.usage}
+
+  ${generateFeatures(features)}
 
   ## Deployed Production
 [${data.deployed}](https://${data.github}.github.io/${data.deployed}/)
@@ -58,5 +96,3 @@ function generateMarkdown(data) {
   ${data.contributions}
 `;
 }
-
-module.exports = generateMarkdown;
