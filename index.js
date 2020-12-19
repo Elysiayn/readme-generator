@@ -209,9 +209,15 @@ const questions = [{
 ];
 
 // TODO: Create a function to write README file
-function writeToFile("README.md", data) {
+const pageHTML = generateMarkdown(responseData);
+fs.writeToFile('README.md', generateMarkdown(responseData), err => {
+    if (err) throw err;
+    console.log('WriteFile Complete!');
+});
 
-};
+// function writeToFile("README.md", responseData) {
+
+// };
 
 // TODO: Create a function to initialize app
 //use inquirer to prompt user w/ question array. Returns user response data.
