@@ -66,14 +66,14 @@ const generateFeatures = featuresText => {
 
 // create the "Deployed Production" section
 const generateDeployed = (deployedText, githubText) => {
-  if (!deployedText && !githubText) {
-    return `
-    ## Deployed Production
-    [${deployedText}](https://${githubText}.github.io/${deployedText}/)
-    `;
+  if (!deployedText || !githubText) {
+    return '';
   }
 
-  return '';
+  return `
+  ## Deployed Production
+  [${deployedText}](https://${githubText}.github.io/${deployedText}/)
+  `;
 };
 
 // adds production screenshot
