@@ -14,8 +14,28 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
   # Title
+  ### SubTitle
 
-  ## 
+  ## Description
+
+  ## Installation
+
+  ## Features
+
+  ## Usage
+
+  ## Deployed Production
+
+  ## License
+
+  ## Badge
+
+  ## Tests
+
+  ## Questions
+
+  ## Contribution 
+  
 `;
 }
 
