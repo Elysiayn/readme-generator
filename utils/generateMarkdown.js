@@ -43,25 +43,25 @@ const generateFeatures = featuresText => {
 };
 
 // create the "Deployed Production" section
-const generateDeployed = deployedText => {
-  if (!deployedText) {
+const generateDeployed = (deployedText, githubText) => {
+  if (!deployedText, githubText) {
     return '';
   }
 
   return `
   ## Deployed Production
-  [${deployed}](https://${github}.github.io/${deployed}/)
+  [${deployedText}](https://${githubText}.github.io/${deployedText}/)
   `;
 };
 
 // adds production screenshot
-const generateImg = imgText => {
-  if (!imgText) {
+const generateImg = (imgText, githubText, deployedText) => {
+  if (!imgText, githubText, deployedText) {
     return '';
   }
 
   return `
-  [![${deployed}](${img})](https://${github}.github.io/${deployed}/)
+  [![${deployedText}](${imgText})](https://${githubText}.github.io/${deployedText}/)
   `;
 };
 
