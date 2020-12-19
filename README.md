@@ -1,9 +1,12 @@
 
-  # title
+  # readme generator
   
+  ### week 9 challenge
+  
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
   ## Description
-  des
+  desc
 
   ## Table of Contents
   * [Installation](#installation)
@@ -25,18 +28,23 @@
 
   
   ## Deployed Production
-  [readme-generator](https://elysiayn.github.io/readme-generator/)
+  [undefined](https://elysiayn.github.io/undefined/)
   
   
 
   
+  ## License
+  License Link below:
+  <br>
+  
+  [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
 
   
 
   ## Questions
   Please feel free to reach me through email for additional questions at:
   <br>
-  Email: wendy.lemus
+  Email: wendy.lemus.wl@gmail.com
 
   Visit my GitHub!
   <br>

@@ -177,11 +177,11 @@ const questions = [{
         default: true
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
-        message: 'Which of the badges would you like to include? (Check all that apply)',
+        message: 'Which of the badges would you like to include?',
         choices: [
-            'Apache', 'Boost', 'BSD', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'Perl', 'SIL', 'Unlicense', 'WTFPL', 'Zlib'
+            'Apache', 'Boost', 'BSD', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'Perl'
         ],
         when: ({
             confirmLicense
@@ -248,7 +248,7 @@ function writeToFile(fileName, responseData) {
 function init() {
     return inquirer.prompt(questions)
         .then(responseData => {
-            console.log('README Complete!')
+            console.log("README Complete!")
             writeToFile('README.md', generateMarkdown(responseData))
         })
 };
