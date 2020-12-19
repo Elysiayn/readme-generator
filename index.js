@@ -177,9 +177,12 @@ const questions = [{
         default: true
     },
     {
-        type: 'input',
+        type: 'checkbox',
         name: 'license',
-        message: 'Provide license information',
+        message: 'Which of the badges would you like to include? (Check all that apply)',
+        choices: [
+            'Apache', 'Boost', 'BSD', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'Perl', 'SIL', 'Unlicense', 'WTFPL', 'Zlib'
+        ],
         when: ({
             confirmLicense
         }) => {
