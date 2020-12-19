@@ -8,7 +8,16 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+const generateLicense = licenseText => {
+  if (!licenseText) {
+    return '';
+  }
+
+  return `
+  ## License
+  ${licenseText}
+  `;
+};
 
 // create the "Subtitle" section
 const generateSubtitle = subtitleText => {
@@ -33,6 +42,53 @@ const generateFeatures = featuresText => {
   `;
 };
 
+// create the "Deployed Production" section
+const generateDeployed = deployedText => {
+  if (!deployedText) {
+    return '';
+  }
+
+  return `
+  ## Deployed Production
+  [${deployed}](https://${github}.github.io/${deployed}/)
+  `;
+};
+
+// adds production screenshot
+const generateImg = imgText => {
+  if (!imgText) {
+    return '';
+  }
+
+  return `
+  [![${deployed}](${img})](https://${github}.github.io/${deployed}/)
+  `;
+};
+
+// create the "Test" section
+const generateTests = testsText => {
+  if (!testsText) {
+    return '';
+  }
+
+  return `
+  ## License
+  ${testsText}
+  `;
+};
+
+// create the "Contributions" section
+const generateContributions = contributionsText => {
+  if (!contributionsText) {
+    return '';
+  }
+
+  return `
+  ### Contributions
+  ${contributionsText}
+  `;
+};
+
 // TODO: Create a function to generate markdown for README
 module.exports = responseData => {
   const {
@@ -43,6 +99,8 @@ module.exports = responseData => {
     usage,
     features,
     deployed,
+    github,
+    email,
     img,
     license,
     tests,
@@ -50,12 +108,11 @@ module.exports = responseData => {
   } = responseData;
 
   return `
-  # ${data.title}
-
+  # ${title}
   ${generateSubtitle(subtitle)}
 
   ## Description
-  ${data.description}
+  ${description}
 
   ## Table of Contents
   * [Installation](#installation)
@@ -68,31 +125,28 @@ module.exports = responseData => {
   * [Contributions](#contributions)
   
   ## Installation
-  ${data.installation}
+  ${installation}
 
   ## Usage
-  ${data.usage}
+  ${usage}
 
   ${generateFeatures(features)}
 
-  ## Deployed Production
-[${data.deployed}](https://${data.github}.github.io/${data.deployed}/)
-[![${data.deployed}](${data.img})](https://${data.github}.github.io/${data.deployed}/)
+  ${generateDeployed(deployed)}
+  ${generateImg(img)}
 
   ## License
-  ${data.license}
+  ${license}
 
-  ## Tests
-  ${data.tests}
+  ${generateTests(tests)}
 
   ## Questions
   Please feel free to reach me through email at:
-  Email: ${data.email}
+  Email: ${email}
 
   Visit my GitHub!
-  GitHub: https://github.com/${data.github}
+  GitHub: https://github.com/${github}
 
-  ### Contributions
-  ${data.contributions}
+  ${generateContributions(contributions)}
 `;
 }
