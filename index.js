@@ -7,12 +7,12 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [{
         type: 'input',
         name: 'github',
-        message: 'What is the username of your GitHub? (Required)',
+        message: 'What is the username for project repository on GitHub? (Required)',
         validate: githubInput => {
             if (githubInput) {
                 return true;
             } else {
-                console.log('Please enter your GitHub username!');
+                console.log('Please enter project repository GitHub username!');
                 return false;
             }
         }
@@ -91,19 +91,6 @@ const questions = [{
     },
     {
         type: 'input',
-        name: 'features',
-        message: 'Provide project features (Required)',
-        validate: featuresInput => {
-            if (featuresInput) {
-                return true;
-            } else {
-                console.log('Please enter your project features!');
-                return false;
-            }
-        }
-    },
-    {
-        type: 'input',
         name: 'usage',
         message: 'Provide instructions for project usage (Required)',
         validate: usageInput => {
@@ -116,14 +103,69 @@ const questions = [{
         }
     },
     {
+        type: 'confirm',
+        name: 'confirmFeatures',
+        message: 'Would you like to include a "Features" section?',
+        default: true
+    },
+    {
         type: 'input',
-        name: 'production',
-        message: 'Provide link to production (Required)',
-        validate: productionInput => {
-            if (productionInput) {
+        name: 'features',
+        message: 'Please enter project features!',
+        when: ({
+            confirmFeatures
+        }) => {
+            if (confirmFeatures) {
                 return true;
             } else {
-                console.log('Please enter link to your deployed project!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmDeployed',
+        message: 'Would you like to include a "Deployed Production" section?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'deployed',
+        message: 'Please provide exact name of project repository from GitHub',
+        when: ({
+            confirmDeployed
+        }) => {
+            if (confirmDeployed) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        validate: deployedInput => {
+            if (deployedInput) {
+                return true;
+            } else {
+                console.log('Please enter exact name/title of project repository from GitHub!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmImg',
+        message: 'Would you like to include a screenshot of the deployed production?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'img',
+        message: 'Please provide the relative path of the project screenshot',
+        when: ({
+            confirmImg
+        }) => {
+            if (confirmImg) {
+                return true;
+            } else {
                 return false;
             }
         }
@@ -194,7 +236,7 @@ const questions = [{
 function writeToFile(fileName, responseData) {
     fs.writeFile(fileName, responseData, err => {
         if (err) throw err;
-        console.log('WriteToFile Complete!');
+        console.log('Done!');
     })
 }
 
@@ -203,7 +245,7 @@ function writeToFile(fileName, responseData) {
 function init() {
     return inquirer.prompt(questions)
         .then(responseData => {
-            console.log('Done!')
+            console.log('README Complete!')
             writeToFile('README.md', generateMarkdown(responseData))
         })
 };

@@ -1,44 +1,55 @@
 # MOXIE
-  ### Cats when they attack:
 
-  ## Description
-  gato violence
+### Cats when they attack:
 
-  ## Table of Contents
-  * [Installation](#installation)
-  * [Features](#features)
-  * [Usage](#usage)
-  * [Production](#production)
-  * [License](#license)
-  * [Tests](#tests)
-  * [Questions](#questions)
-  * [Contributions](#contributions)
-  
-  ## Installation
-  download git
+## Description
 
-  ## Features
-  features
+gato violence
 
-  ## Usage
-  usage
+## Table of Contents
 
-  ## Production
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+- [Production](#production)
+- [License](#license)
+- [Tests](#tests)
+- [Questions](#questions)
+- [Contributions](#contributions)
+
+## Installation
+
+download git
+
+## Features
+
+features
+
+## Usage
+
+usage
+
+## Production
+
 [production](https://elysiayn.github.io/production/)
 [![production](assets/images/screenshot.png)](https://elysiayn.github.io/production/)
 
-  ## License
-  undefined
+## License
 
-  ## Tests
-  undefined
+undefined
 
-  ## Questions
-  Please feel free to reach me through email at:
-  Email: wendy.lemus.wl@gmail.com
+## Tests
 
-  Visit my GitHub!
-  GitHub: https://github.com/elysiayn
+undefined
 
-  ### Contributions
-  undefined
+## Questions
+
+Please feel free to reach me through email at:
+Email: wendy.lemus.wl@gmail.com
+
+Visit my GitHub!
+GitHub: https://github.com/elysiayn
+
+### Contributions
+
+undefined

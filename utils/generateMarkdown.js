@@ -20,8 +20,8 @@ function generateMarkdown(data) {
 
   ## Table of Contents
   * [Installation](#installation)
-  * [Features](#features)
   * [Usage](#usage)
+  * [Features](#features)
   * [Production](#production)
   * [License](#license)
   * [Tests](#tests)
@@ -37,9 +37,9 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ## Production
-[${data.production}](https://elysiayn.github.io/${data.production}/)
-[![${data.production}](assets/images/screenshot.png)](https://elysiayn.github.io/${data.production}/)
+  ## Deployed Production
+[${data.deployed}](https://${data.github}.github.io/${data.deployed}/)
+[![${data.deployed}](${data.img})](https://${data.github}.github.io/${data.deployed}/)
 
   ## License
   ${data.license}
