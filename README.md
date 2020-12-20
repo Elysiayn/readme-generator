@@ -45,8 +45,6 @@ This application is intended to conditionally generate a professional quality re
 
 ## Production
 
-[readme-generator](https://Elysiayn.github.io/readme-generator/)
-
 [![readme-generator](utils/images/screenshot.png)](https://Elysiayn.github.io/readme-generator/)
 
 ## Questions
