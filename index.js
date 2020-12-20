@@ -222,13 +222,21 @@ const questions = [{
     {
         type: 'input',
         name: 'contributions',
-        message: 'Provide contribution information',
+        message: 'Provide the GitHub Username of contributor',
         when: ({
             confirmContributions
         }) => {
             if (confirmContributions) {
                 return true;
             } else {
+                return false;
+            }
+        },
+        validate: contributionsInput => {
+            if (contributionsInput) {
+                return true;
+            } else {
+                console.log('Please enter the GitHub Username of contributor!');
                 return false;
             }
         }

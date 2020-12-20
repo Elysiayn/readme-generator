@@ -99,14 +99,15 @@ const generateTests = testsText => {
 };
 
 // create the "Contributions" section
-const generateContributions = contributionsText => {
-  if (!contributionsText) {
+const generateContributions = (githubText, contributionsText) => {
+  if (!githubText || !contributionsText) {
     return '';
   }
 
   return `
   ### Contributions
-  * ${contributionsText}
+  * [${githubText}](https://github.com/${githubText})
+  * [${contributionsText}](https://github.com/${contributionsText})
   `;
 };
 
@@ -190,6 +191,6 @@ ${generateContent(table)}
   <br>
   GitHub: [${github}](https://github.com/${github})
 
-  ${generateContributions(contributions)}
+  ${generateContributions(github, contributions)}
 `;
 }
