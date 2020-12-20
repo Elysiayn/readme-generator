@@ -281,20 +281,9 @@ function init() {
     return inquirer.prompt(questions)
         .then(responseData => {
             console.log("README Complete!")
-            writeToFile('README.md', generateMarkdown(responseData))
+            writeToFile('./dist/README.md', generateMarkdown(responseData))
         })
 };
 
 // Function call to initialize app
 init();
-
-
-// ## Table of Contents
-// * [Installation](#installation)
-// * [Usage](#usage)
-// * [Features](#Features)
-// * [Deployed Production](#deployedProduction)
-// * [License](#license)
-// * [Tests](#tests)
-// * [Questions](#questions)
-// * [Contributions](#contributions)
