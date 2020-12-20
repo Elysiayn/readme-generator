@@ -12,7 +12,6 @@ function renderLicenseBadge(apache, boost, bsd, eclipse, gnu, ibm, isc, perl) {
   : '';
 }
 
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(apache, boost, bsd, eclipse, gnu, ibm, isc, perl) {
@@ -111,10 +110,22 @@ const generateContributions = contributionsText => {
   `;
 };
 
+// generate title in "Table of Contents"
+const generateTable = table => {
+  if (!table) {
+    return '';
+  }
+
+  return `
+  ## Table of Contents
+  `;
+};
+
 // TODO: Create a function to generate markdown for README
 module.exports = responseData => {
   const {
     title,
+    table,
     subtitle,
     description,
     installation,
@@ -137,15 +148,7 @@ module.exports = responseData => {
   ## Description
   ${description}
 
-  ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Features](#features)
-  * [Production](#production)
-  * [License](#license)
-  * [Tests](#tests)
-  * [Questions](#questions)
-  * [Contributions](#contributions)
+${generateTable(table)}
   
   ## Installation
   1. ${installation}

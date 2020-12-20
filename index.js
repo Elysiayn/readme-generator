@@ -145,7 +145,7 @@ const questions = [{
             if (deployedInput) {
                 return true;
             } else {
-                console.log('Please enter exact name/title of project repository from GitHub!');
+                console.log('Please enter exact name of project repository from GitHub!');
                 return false;
             }
         }
@@ -232,7 +232,31 @@ const questions = [{
                 return false;
             }
         }
-    }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmTable',
+        message: 'Would you like to include a Table of Contents section?',
+        default: true
+    },
+    {
+        type: 'checkbox',
+        name: 'table',
+        message: 'Please select links to be displayed under the Table of Contents',
+        choices: [
+            'Description', 'Installation', 'Usage', 'Features', 'Deployed Production',
+            'License', 'Tests', 'Questions', 'Contribution'
+        ],
+        when: ({
+            confirmTable
+        }) => {
+            if (confirmTable) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    },
 ];
 
 // TODO: Create a function to write README file
@@ -255,3 +279,14 @@ function init() {
 
 // Function call to initialize app
 init();
+
+
+// ## Table of Contents
+// * [Installation](#installation)
+// * [Usage](#usage)
+// * [Features](#Features)
+// * [Deployed Production](#deployedProduction)
+// * [License](#license)
+// * [Tests](#tests)
+// * [Questions](#questions)
+// * [Contributions](#contributions)
