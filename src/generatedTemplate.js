@@ -1,8 +1,7 @@
-
 const fs = require('fs');
 const writeFile = (readContent => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/readme.md', readContent, err => {
+        fs.writeFile('./dist/README.md', readContent, err => {
             if (err) {
                 reject(err);
                 return;
@@ -14,7 +13,8 @@ const writeFile = (readContent => {
             };
         });
     })
-    
 })
 
-module.exports = { writeFile };
+module.exports = {
+    writeFile
+};

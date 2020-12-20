@@ -7,7 +7,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [{
         type: 'input',
         name: 'github',
-        message: 'What is the username for project repository on GitHub? (Required)',
+        message: 'What is the username for project repository on GitHub? (Required):',
         validate: githubInput => {
             if (githubInput) {
                 return true;
@@ -20,7 +20,7 @@ const questions = [{
     {
         type: 'input',
         name: 'email',
-        message: 'Please provide a current email address (Required)',
+        message: 'Please provide a current email address (Required):',
         validate: emailInput => {
             if (emailInput) {
                 return true;
@@ -33,7 +33,7 @@ const questions = [{
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project? (Required)',
+        message: 'What is the title of your project? (Required):',
         validate: titleInput => {
             if (titleInput) {
                 return true;
@@ -66,7 +66,7 @@ const questions = [{
     {
         type: 'input',
         name: 'description',
-        message: 'Provide a description of the project (Required)',
+        message: 'Provide a description of the project (Required):',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -79,7 +79,7 @@ const questions = [{
     {
         type: 'input',
         name: 'installation',
-        message: 'Provide installation instructions for the project (Required)',
+        message: 'Provide installation instructions for the project (Required):',
         validate: installationInput => {
             if (installationInput) {
                 return true;
@@ -92,7 +92,7 @@ const questions = [{
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions for project usage (Required)',
+        message: 'Provide instructions for project usage (Required):',
         validate: usageInput => {
             if (usageInput) {
                 return true;
@@ -131,7 +131,7 @@ const questions = [{
     {
         type: 'input',
         name: 'production',
-        message: 'Please provide exact name of project repository from GitHub',
+        message: 'Please provide the exact name of the project repository from GitHub:',
         when: ({
             confirmProduction
         }) => {
@@ -159,7 +159,7 @@ const questions = [{
     {
         type: 'input',
         name: 'img',
-        message: 'Please provide the relative path of the project screenshot (ex. assests/images/screenshot.png)',
+        message: 'Please provide the relative path of the project screenshot (ex. assests/images/screenshot.png):',
         when: ({
             confirmImg
         }) => {
@@ -202,7 +202,7 @@ const questions = [{
     {
         type: 'input',
         name: 'tests',
-        message: 'Provide test information',
+        message: 'Provide test information:',
         when: ({
             confirmTests
         }) => {
@@ -222,7 +222,7 @@ const questions = [{
     {
         type: 'input',
         name: 'contributions',
-        message: 'Provide the GitHub Username of contributor',
+        message: 'Provide the GitHub Username of contributor:',
         when: ({
             confirmContributions
         }) => {
@@ -250,7 +250,7 @@ const questions = [{
     {
         type: 'checkbox',
         name: 'table',
-        message: 'Please select links to be displayed under the Table of Contents',
+        message: 'Please select links to be displayed under the Table of Contents:',
         choices: [
             'Description', 'Installation', 'Usage', 'Features', 'Production',
             'License', 'Tests', 'Questions', 'Contribution'

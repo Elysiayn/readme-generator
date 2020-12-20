@@ -6,7 +6,7 @@
   
 
   ## Description
-  DESCRIPTION
+  DESCRIPTION TEXT
 
 
   ## Table of Contents
@@ -24,22 +24,22 @@
 <br>
 
   ## Installation
-  * INSTALLATION
+  * INSTALLATION TEXT
 
   ## Usage
-  * USAGE
+  * USAGE TEXT
 
   
   ## Features
-  * FEATURES
+  * FEATURES TEXT
   
 
   
   ## Production
-  [PROJECT-REPO](https://USERNAME.github.io/PROJECT-REPO/)
+  [PROJECT-REPO](https://UserName.github.io/PROJECT-REPO/)
   
   
-  [![PROJECT-REPO](utils/images/screenshot.png)](https://USERNAME.github.io/PROJECT-REPO/)
+  [![PROJECT-REPO](utils/images/screenshot.png)](https://UserName.github.io/PROJECT-REPO/)
   
 
   
@@ -51,20 +51,20 @@
 
   
   ## Tests
-  TESTS
+  TEST TEXT
   
 
   ## Questions
   Please feel free to reach me for additional questions at:
   <br>
-  Email: email@gmail.com
+  Email: Email@gmail.com
 
   Visit my GitHub!
   <br>
-  GitHub: [USERNAME](https://github.com/USERNAME)
+  GitHub: [UserName](https://github.com/UserName)
 
   
   ### Contributions
-  * [USERNAME](https://github.com/USERNAME)
-  * [CONTRIBUTION-USERNAME](https://github.com/CONTRIBUTION-USERNAME)
+  * [UserName](https://github.com/UserName)
+  * [Cont-User](https://github.com/Cont-User)
   
