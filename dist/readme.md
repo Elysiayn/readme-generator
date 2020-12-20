@@ -6,40 +6,40 @@
   
 
   ## Description
-  DESCRIPTION TEXT
+  SAMPLE TEXT
 
 
   ## Table of Contents
   
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Features](#Features)
-- [Production](#Production)
-- [License](#License)
-- [Tests](#Tests)
-- [Questions](#Questions)
-- [Contribution](#Contribution)
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Features](#Features)
+* [Production](#Production)
+* [License](#License)
+* [Tests](#Tests)
+* [Questions](#Questions)
+* [Contribution](#Contribution)
 
 <br>
 
   ## Installation
-  * INSTALLATION TEXT
+  * SAMPLE TEXT
 
   ## Usage
-  * USAGE TEXT
+  * SAMPLE TEXT
 
   
   ## Features
-  * FEATURES TEXT
+  * SAMPLE TEXT
   
 
   
   ## Production
-  [PROJECT-REPO](https://UserName.github.io/PROJECT-REPO/)
+  [readme-genetator](https://Elysiayn.github.io/readme-genetator/)
   
   
-  [![PROJECT-REPO](utils/images/screenshot.png)](https://UserName.github.io/PROJECT-REPO/)
+  [![readme-genetator](utils/images/screenshot.png)](https://Elysiayn.github.io/readme-genetator/)
   
 
   
@@ -51,20 +51,20 @@
 
   
   ## Tests
-  TEST TEXT
+  SAMPLE TEXT
   
 
   ## Questions
   Please feel free to reach me for additional questions at:
   <br>
-  Email: Email@gmail.com
+  Email: wendy.lemus.wl@gmail.com
 
   Visit my GitHub!
   <br>
-  GitHub: [UserName](https://github.com/UserName)
+  GitHub: [Elysiayn](https://github.com/Elysiayn)
 
   
   ### Contributions
-  * [UserName](https://github.com/UserName)
-  * [Cont-User](https://github.com/Cont-User)
+  * [Elysiayn](https://github.com/Elysiayn)
+  * [moxieCodes](https://github.com/moxieCodes)
   

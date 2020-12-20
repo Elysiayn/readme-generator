@@ -7,7 +7,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [{
         type: 'input',
         name: 'github',
-        message: 'What is the username for project repository on GitHub? (Required):',
+        message: 'What is the username of the owner of the project repository on GitHub? (Required):',
         validate: githubInput => {
             if (githubInput) {
                 return true;
@@ -20,7 +20,7 @@ const questions = [{
     {
         type: 'input',
         name: 'email',
-        message: 'Please provide a current email address (Required):',
+        message: 'Provide a current email address (Required):',
         validate: emailInput => {
             if (emailInput) {
                 return true;
@@ -33,12 +33,12 @@ const questions = [{
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project? (Required):',
+        message: 'What is the title of the project? (Required):',
         validate: titleInput => {
             if (titleInput) {
                 return true;
             } else {
-                console.log('Please enter your project title!');
+                console.log('Please enter the project title!');
                 return false;
             }
         }
@@ -71,7 +71,7 @@ const questions = [{
             if (descriptionInput) {
                 return true;
             } else {
-                console.log('Please enter your project description!');
+                console.log('Please enter a project description!');
                 return false;
             }
         }
@@ -84,7 +84,7 @@ const questions = [{
             if (installationInput) {
                 return true;
             } else {
-                console.log('Please enter installation instructions for your project!');
+                console.log('Please enter installation instructions for the project!');
                 return false;
             }
         }
@@ -131,7 +131,7 @@ const questions = [{
     {
         type: 'input',
         name: 'production',
-        message: 'Please provide the exact name of the project repository from GitHub:',
+        message: 'Please provide the project repository name from GitHub:',
         when: ({
             confirmProduction
         }) => {
@@ -202,7 +202,7 @@ const questions = [{
     {
         type: 'input',
         name: 'tests',
-        message: 'Provide test information:',
+        message: 'Please provide test information:',
         when: ({
             confirmTests
         }) => {
@@ -244,7 +244,7 @@ const questions = [{
     {
         type: 'confirm',
         name: 'confirmTable',
-        message: 'Would you like to include a Table of Contents section?',
+        message: 'Would you like to include a "Table of Contents" section?',
         default: true
     },
     {

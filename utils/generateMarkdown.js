@@ -129,7 +129,7 @@ const generateContent = (table) => {
   let tableList = '';
   if (table) {
     tableContentArr.forEach(item => {
-      tableList += `- [${item}](#${item})\n`
+      tableList += `* [${item}](#${item})\n`
     });
   }
   return tableList
