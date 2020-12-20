@@ -1,6 +1,6 @@
-# Professional Readme Generator
+# Professional README.md Generator
 
-### UCT Coding BootCamp Module 9 Challenge
+### UCF Coding Boot-Camp Module 9 Challenge
 
 ## Description
 
@@ -22,9 +22,9 @@ This application is intended to conditionally generate a professional quality re
 
 - Clone down the application code from GitHub.
 - Please ensure you have a node.js integrated terminal before running 'npm inquirer' in the of the root project directory. If not:
-- - Download [Node](https://nodejs.org/en/).
-- - Inside root directory terminal, run 'npm init'.
-- - Inside root directory terminal, run 'npm install inquire' to install [Inquirer](https://www.npmjs.com/package/inquirer#installation).
+- Download [Node](https://nodejs.org/en/).
+- Inside root directory terminal, run 'npm init'.
+- Inside root directory terminal, run 'npm install inquire' to install [Inquirer](https://www.npmjs.com/package/inquirer#installation).
 - Inside root directory terminal, run 'node index.js' to activate application.
 
 ## Usage
@@ -32,7 +32,7 @@ This application is intended to conditionally generate a professional quality re
 - Once application is running, user will answer questions by typing in their response into the terminal.
 - Questions with '(Required)' will need to be input before the program can proceed.
 - When confirming the content in the 'Table of Content' section, this generates a link in this section only.
-- - If the user did not confirm a section (ex. Features) from previous question prompts and also selected to include a 'Features' item under the 'Table of Contents', this will render a 'Features' link that will not work as no such section would exist.
+- If the user did not confirm a section (ex. Features) from previous question prompts and also selected to include a 'Features' item under the 'Table of Contents', this will render a 'Features' link that will not work as no such section would exist.
 - Please review video of application [demo](https://youtu.be/jZtH6FnvjPU).
 
 ## Features
@@ -47,7 +47,7 @@ This application is intended to conditionally generate a professional quality re
 
 [readme-generator](https://Elysiayn.github.io/readme-generator/)
 
-<!-- [![readme-generator](utils/images/screenshot.png)](https://Elysiayn.github.io/readme-generator/) -->
+[![readme-generator](utils/images/screenshot.png)](https://Elysiayn.github.io/readme-generator/)
 
 ## Questions
 
