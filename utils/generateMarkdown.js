@@ -64,25 +64,25 @@ const generateFeatures = featuresText => {
 };
 
 // create the "Deployed Production" section
-const generateDeployed = (deployedText, githubText) => {
-  if (!deployedText || !githubText) {
+const generateProduction = (productionText, githubText) => {
+  if (!productionText || !githubText) {
     return '';
   }
 
   return `
-  ## Deployed Production
-  [${deployedText}](https://${githubText}.github.io/${deployedText}/)
+  ## Production
+  [${productionText}](https://${githubText}.github.io/${productionText}/)
   `;
 };
 
 // adds production screenshot
-const generateImg = (imgText, githubText, deployedText) => {
-  if (!imgText || !githubText || !deployedText) {
+const generateImg = (imgText, githubText, productionText) => {
+  if (!imgText || !githubText || !productionText) {
     return '';
   }
 
   return `
-  [![${deployedText}](${imgText})](https://${githubText}.github.io/${deployedText}/)
+  [![${productionText}](${imgText})](https://${githubText}.github.io/${productionText}/)
   `;
 };
 
@@ -121,6 +121,19 @@ const generateTable = table => {
   `;
 };
 
+// generate content in "Table of Contents"
+const generateContent= (table) => {
+  const tableContentArr = table; 
+
+  let tableList = '';
+  if (table) {
+    tableContentArr.forEach(item => {
+      tableList += `* [${item}](${item})\n`
+    });
+  }
+  return tableList
+};
+
 // TODO: Create a function to generate markdown for README
 module.exports = responseData => {
   const {
@@ -131,7 +144,7 @@ module.exports = responseData => {
     installation,
     usage,
     features,
-    deployed,
+    production,
     github,
     email,
     img,
@@ -149,6 +162,7 @@ module.exports = responseData => {
   ${description}
 
 ${generateTable(table)}
+${generateContent(table)}
   
   ## Installation
   1. ${installation}
@@ -158,8 +172,8 @@ ${generateTable(table)}
 
   ${generateFeatures(features)}
 
-  ${generateDeployed(deployed, github)}
-  ${generateImg(img, github, deployed)}
+  ${generateProduction(production, github)}
+  ${generateImg(img, github, production)}
 
   ${generateLicense(license)}
   ${renderLicenseLink(license)}

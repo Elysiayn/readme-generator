@@ -124,25 +124,25 @@ const questions = [{
     },
     {
         type: 'confirm',
-        name: 'confirmDeployed',
-        message: 'Would you like to include a "Deployed Production" section?',
+        name: 'confirmProduction',
+        message: 'Would you like to include a "Production" section for the deployed project?',
         default: true
     },
     {
         type: 'input',
-        name: 'deployed',
+        name: 'production',
         message: 'Please provide exact name of project repository from GitHub',
         when: ({
-            confirmDeployed
+            confirmProduction
         }) => {
-            if (confirmDeployed) {
+            if (confirmProduction) {
                 return true;
             } else {
                 return false;
             }
         },
-        validate: deployedInput => {
-            if (deployedInput) {
+        validate: productionInput => {
+            if (productionInput) {
                 return true;
             } else {
                 console.log('Please enter exact name of project repository from GitHub!');
@@ -244,7 +244,7 @@ const questions = [{
         name: 'table',
         message: 'Please select links to be displayed under the Table of Contents',
         choices: [
-            'Description', 'Installation', 'Usage', 'Features', 'Deployed Production',
+            'Description', 'Installation', 'Usage', 'Features', 'Production',
             'License', 'Tests', 'Questions', 'Contribution'
         ],
         when: ({
