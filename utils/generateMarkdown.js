@@ -128,7 +128,7 @@ const generateContent= (table) => {
   let tableList = '';
   if (table) {
     tableContentArr.forEach(item => {
-      tableList += `* [${item}](${item})\n`
+      tableList += `- [${item}](#${item})\n`
     });
   }
   return tableList
@@ -165,10 +165,10 @@ ${generateTable(table)}
 ${generateContent(table)}
   
   ## Installation
-  1. ${installation}
+  * ${installation}
 
   ## Usage
-  1. ${usage}
+  * ${usage}
 
   ${generateFeatures(features)}
 
@@ -181,7 +181,7 @@ ${generateContent(table)}
   ${generateTests(tests)}
 
   ## Questions
-  Please feel free to reach me through email for additional questions at:
+  Please feel free to reach me for additional questions at:
   <br>
   Email: ${email}
 
