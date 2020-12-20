@@ -163,7 +163,8 @@ module.exports = responseData => {
 
 ${generateTable(table)}
 ${generateContent(table)}
-  
+<br>
+
   ## Installation
   * ${installation}
 
