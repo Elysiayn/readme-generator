@@ -1,70 +1,41 @@
 
-  # TITLE
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  # zaerdy
   
-  ### SUBTITLE
   
 
   ## Description
-  SAMPLE TEXT
+  ETDHTAETHY
 
 
-  ## Table of Contents
-  
-* [Description](#Description)
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [Features](#Features)
-* [Production](#Production)
-* [License](#License)
-* [Tests](#Tests)
-* [Questions](#Questions)
-* [Contribution](#Contribution)
 
 <br>
 
   ## Installation
-  * SAMPLE TEXT
+  * rstgjaetzu
 
   ## Usage
-  * SAMPLE TEXT
+  * ttrduartu
 
   
   ## Features
-  * SAMPLE TEXT
+  * dghaaet
   
 
   
-  ## Production
-  [readme-genetator](https://Elysiayn.github.io/readme-genetator/)
-  
-  
-  [![readme-genetator](utils/images/screenshot.png)](https://Elysiayn.github.io/readme-genetator/)
   
 
   
-  ## License
-  Please review the license this application is under:
-  <br>
   
-  [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
 
-  
-  ## Tests
-  SAMPLE TEXT
   
 
   ## Questions
   Please feel free to reach me for additional questions at:
   <br>
-  Email: wendy.lemus.wl@gmail.com
+  Email: szerywer5
 
   Visit my GitHub!
   <br>
-  GitHub: [Elysiayn](https://github.com/Elysiayn)
+  GitHub: [dsfheadftd](https://github.com/dsfheadftd)
 
-  
-  ### Contributions
-  * [Elysiayn](https://github.com/Elysiayn)
-  * [moxieCodes](https://github.com/moxieCodes)
   

@@ -24,7 +24,7 @@ This application is intended to conditionally generate a professional quality re
 - Please ensure you have a node.js integrated terminal before running 'npm inquirer' in the of the root project directory. If not:
 - Download [Node](https://nodejs.org/en/).
 - Inside root directory terminal, run 'npm init'.
-- Inside root directory terminal, run 'npm install inquire' to install [Inquirer](https://www.npmjs.com/package/inquirer#installation).
+- Inside root directory terminal, run 'npm install inquirer' to install [Inquirer](https://www.npmjs.com/package/inquirer#installation).
 - Inside root directory terminal, run 'node index.js' to activate application.
 
 ## Usage
