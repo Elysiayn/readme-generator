@@ -4,7 +4,7 @@
 
 ## Description
 
-This application is intended to conditionally generate a professional quality readme with just a few question prompts. Readme-Generator was developed in a GitHub user-friendly manner to streamline the markdown creation process by providing a robust template generated with targeted project data. Template includes title, description, installation, usage and a questions section, with optional additions of a subtitle, features, deployed production, license (including badges), tests and contribution section.
+<!-- This application is intended to conditionally generate a professional quality readme with just a few question prompts. Readme-Generator was developed in a GitHub user-friendly manner to streamline the markdown creation process by providing a robust template generated with targeted project data. Template includes title, description, installation, usage and a questions section, with optional additions of a subtitle, features, deployed production, license (including badges), tests and contribution section. -->
 
 ## Table of Contents
 
