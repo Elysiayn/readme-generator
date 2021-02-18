@@ -1,12 +1,12 @@
 
-  # WEEK ( CHALLENGE
+  # Something Special
   
   
-  ### Done with love
+  ### UCF Coding Boot-Camp Project 2
   
 
   ## Description
-  DESCRIPTION
+  An application provides a service for users to be able to easily access a community forum for event-related decorations. 
 
 
   ## Table of Contents
@@ -22,22 +22,22 @@
 <br>
 
   ## Installation
-  * INSTALLATION
+  * Clone downthe application from GitHub.
 
   ## Usage
-  * USAGE
+  * Load site from domain.
 
   
   ## Features
-  * FEATURES
+  * Smooth interface and very responsive.
   
 
   
   ## Production
-  [readme-generator](https://Elysiayn.github.io/readme-generator/)
+  [Something-Special](https://Clu-Codes.github.io/Something-Special/)
   
   
-  [![readme-generator](utils/images/screenshot.png)](https://Elysiayn.github.io/readme-generator/)
+  [![Something-Special](public/images/screenshot.png)](https://Clu-Codes.github.io/Something-Special/)
   
 
   
@@ -48,14 +48,14 @@
   ## Questions
   Please feel free to reach me for additional questions at:
   <br>
-  Email: wendy.lemus.wl@gmail.com
+  Email: Wendy.Lemus.WL@gmail.com
 
   Visit my GitHub!
   <br>
-  GitHub: [Elysiayn](https://github.com/Elysiayn)
+  GitHub: [Clu-Codes](https://github.com/Clu-Codes)
 
   
   ### Contributions
-  * [Elysiayn](https://github.com/Elysiayn)
-  * [Elysiayn](https://github.com/Elysiayn)
+  * [Clu-Codes](https://github.com/Clu-Codes)
+  * [Clu-Codes](https://github.com/Clu-Codes)
   
